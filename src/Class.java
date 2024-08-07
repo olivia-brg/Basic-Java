@@ -15,8 +15,6 @@ public class Class {
         System.out.println(fullBook);
 
         System.out.println(fullBook.title);
-
-        
     }
 }
 
