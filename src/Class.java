@@ -2,7 +2,7 @@ public class Class {
     public static void main(String[] args) throws Exception {
 
         // Utilise le constructeur par défaut
-        Book defaultBook = new Book(null, null, 0);
+        Book defaultBook = new Book();
         
         // Utilise le constructeur secondaire
         Book customBook = new Book("Java Programming", "John Doe", 300);
@@ -25,6 +25,13 @@ class Book {
     int numberOfPages;
     String publisher;
 
+    // Constructeur par defaut de la classe Book
+    Book() {
+
+        // Utilise le constructeur principal avec des valeur prédéfinies
+        this("title", "author", 0, "OC");
+    }
+
     // Constructeur secondaire de la classe Book
     Book(String title, String author, int numberOfPages) {
 
@@ -46,6 +53,6 @@ class Book {
         return "title='" + title + "'" +
                ", author='" + author + "'" +
                ", numberOfPages=" + numberOfPages +
-               ", publisher='" + publisher;
+               ", publisher='" + publisher + "'";
     }
 }
